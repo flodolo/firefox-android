@@ -24,7 +24,7 @@ private object Versions {
     const val androidx_navigation = "2.1.0-alpha02"
     const val androidx_recyclerview = "1.1.0-alpha04"
 
-    const val appservices_gradle_plugin = "0.4.2"
+    const val appservices_gradle_plugin = "0.4.4"
     const val mozilla_android_components = "0.50.0-SNAPSHOT"
     const val mozilla_appservices = "0.23.0"
  
