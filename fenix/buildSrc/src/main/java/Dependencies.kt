@@ -102,8 +102,6 @@ object Deps {
     const val mozilla_feature_session_bundling = "org.mozilla.components:feature-session-bundling:${Versions.mozilla_android_components}"
     const val mozilla_feature_site_permissions = "org.mozilla.components:feature-sitepermissions:${Versions.mozilla_android_components}"
 
-    const val mozilla_places = "org.mozilla.appservices:places:${Versions.mozilla_appservices}"
-
     const val mozilla_service_firefox_accounts = "org.mozilla.components:service-firefox-accounts:${Versions.mozilla_android_components}"
     const val mozilla_service_fretboard = "org.mozilla.components:service-fretboard:${Versions.mozilla_android_components}"
     const val mozilla_service_glean = "org.mozilla.components:service-glean:${Versions.mozilla_android_components}"
