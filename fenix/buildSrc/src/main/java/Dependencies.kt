@@ -27,6 +27,7 @@ private object Versions {
     const val androidx_testing = "1.1.0-alpha08"
     const val androidx_core = "1.2.0-alpha01"
     const val androidx_transition = "1.1.0-rc01"
+    const val google_material = "1.1.0-alpha06"
 
     const val appservices_gradle_plugin = "0.4.4"
     const val mozilla_android_components = "0.50.0-SNAPSHOT"
@@ -142,6 +143,7 @@ object Deps {
     const val androidx_recyclerview = "androidx.recyclerview:recyclerview:${Versions.androidx_recyclerview}"
     const val androidx_core = "androidx.core:core:${Versions.androidx_core}"
     const val androidx_transition = "androidx.transition:transition:${Versions.androidx_transition}"
+    const val google_material = "com.google.android.material:material:{${Versions.google_material}"
 
     const val autodispose = "com.uber.autodispose:autodispose:${Versions.autodispose}"
     const val autodispose_android = "com.uber.autodispose:autodispose-android:${Versions.autodispose}"
