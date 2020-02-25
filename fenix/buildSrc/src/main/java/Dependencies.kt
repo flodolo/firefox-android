@@ -196,9 +196,6 @@ object Deps {
     const val androidx_junit = "androidx.test.ext:junit:${Versions.androidx_test_ext}"
     const val androidx_test_core = "androidx.test:core:${Versions.androidx_testing}"
 
-    const val fenix_megazord = "org.mozilla.appservices:fenix-megazord:${Versions.mozilla_appservices}"
-    const val fenix_megazord_forUnitTests = "org.mozilla.appservices:fenix-megazord-forUnitTests:${Versions.mozilla_appservices}"
-
     const val google_ads_id = "com.google.android.gms:play-services-ads-identifier:${Versions.google_ads_id_version}"
 
     const val lottie = "com.airbnb.android:lottie:${Versions.airbnb_lottie}"
