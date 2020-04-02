@@ -42,7 +42,6 @@ object Versions {
     const val junit = "5.5.2"
     const val mockito = "2.24.5"
     const val mockk = "1.9.kotlin12"
-    const val assertk = "0.19"
 
     const val mockwebserver = "3.11.0"
     const val orchestrator = "1.3.0-alpha02"
@@ -178,7 +177,6 @@ object Deps {
     const val mockito_core = "org.mockito:mockito-core:${Versions.mockito}"
     const val mockito_android = "org.mockito:mockito-android:${Versions.mockito}"
     const val mockk = "io.mockk:mockk:${Versions.mockk}"
-    const val assertk = "com.willowtreeapps.assertk:assertk-jvm:${Versions.assertk}"
 
     // --- START AndroidX test dependencies --- //
     // N.B.: the versions of these dependencies appear to be pinned together. To avoid bugs, they
