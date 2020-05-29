@@ -40,7 +40,6 @@ object Versions {
     const val installreferrer = "1.0"
 
     const val junit = "5.5.2"
-    const val mockito = "2.24.5"
     const val mockk = "1.10.0"
 
     const val mockwebserver = "3.11.0"
@@ -178,8 +177,6 @@ object Deps {
     const val installreferrer = "com.android.installreferrer:installreferrer:${Versions.installreferrer}"
 
     const val junit = "junit:junit:${Versions.junit}"
-    const val mockito_core = "org.mockito:mockito-core:${Versions.mockito}"
-    const val mockito_android = "org.mockito:mockito-android:${Versions.mockito}"
     const val mockk = "io.mockk:mockk:${Versions.mockk}"
 
     // --- START AndroidX test dependencies --- //
