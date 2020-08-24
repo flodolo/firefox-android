@@ -211,6 +211,10 @@ object Deps {
 
     const val google_ads_id = "com.google.android.gms:play-services-ads-identifier:${Versions.google_ads_id_version}"
 
+    // Required for in-app reviews
+    const val google_play_store = "com.google.android.play:core:${Versions.google_play_store_version}"
+    const val google_play_core_ktx = "com.google.android.play:core-ktx:${Versions.google_play_core_ktx_version}"
+
     const val lottie = "com.airbnb.android:lottie:${Versions.airbnb_lottie}"
 
     const val detektApi = "io.gitlab.arturbosch.detekt:detekt-api:${Versions.detekt}"
