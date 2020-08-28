@@ -213,7 +213,6 @@ object Deps {
 
     // Required for in-app reviews
     const val google_play_store = "com.google.android.play:core:${Versions.google_play_store_version}"
-    const val google_play_core_ktx = "com.google.android.play:core-ktx:${Versions.google_play_core_ktx_version}"
 
     const val lottie = "com.airbnb.android:lottie:${Versions.airbnb_lottie}"
 
