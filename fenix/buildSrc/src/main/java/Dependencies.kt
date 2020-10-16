@@ -221,8 +221,6 @@ object Deps {
     // Required for in-app reviews
     const val google_play_store = "com.google.android.play:core:${Versions.google_play_store_version}"
 
-    const val lottie = "com.airbnb.android:lottie:${Versions.airbnb_lottie}"
-
     const val detektApi = "io.gitlab.arturbosch.detekt:detekt-api:${Versions.detekt}"
     const val detektTest = "io.gitlab.arturbosch.detekt:detekt-test:${Versions.detekt}"
     const val junitApi = "org.junit.jupiter:junit-jupiter-api:${Versions.junit}"
