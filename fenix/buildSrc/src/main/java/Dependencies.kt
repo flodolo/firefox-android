@@ -44,7 +44,7 @@ object Versions {
     const val installreferrer = "1.0"
 
     const val junit = "5.5.2"
-    const val mockk = "1.10.0"
+    const val mockk = "1.10.6"
 
     const val mockwebserver = "3.11.0"
     const val orchestrator = "1.3.0-alpha02"
