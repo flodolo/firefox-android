@@ -14,6 +14,7 @@ jobs:
       - name: Clone repository
         uses: actions/checkout@v3
         with:
+          fetch-depth: 0
           path: "source"
       - name: Clone l10n repository
         uses: actions/checkout@v3
@@ -32,6 +33,11 @@ jobs:
           python source/.github/scripts/import_strings.py l10n
           --toml l10n/mozilla-mobile/android-components/l10n.toml
           --dest source/android-components
+      - name: Copy translated files for fenix
+        run: >
+          python source/.github/scripts/import_strings.py l10n
+          --toml l10n/mozilla-mobile/fenix/l10n.toml
+          --dest source/fenix
       - name: Copy translated files for focus-android
         run: >
           python source/.github/scripts/import_strings.py l10n
@@ -43,13 +49,13 @@ jobs:
           cd source
           if [[ $(git diff --exit-code) || $(git ls-files --other --exclude-standard) ]]
           then
-            branch="monorepo_l10n_updates"
+            branch="monorepo_l10n_updates_fenix"
             git config user.name "l10n-bot"
             git config user.email "actions@users.noreply.github.com"
 
             git checkout -B "$branch"
             git add .
-            git commit -m "Import strings from android-l10n"
+            git commit -m "Import strings from android-l10n (+ fenix)"
             git push -f origin "$branch"
 
             # Create pull request if there isn't one open yet, use the last
@@ -61,7 +67,7 @@ jobs:
                 echo "Link: $pr_link"
             else
                 echo "Opening new pull request."
-                gh pr create --fill
+                gh pr create -t "Import strings from android-l10n (+ fenix)" -b ""
             fi
           else
             echo "No changes found."
