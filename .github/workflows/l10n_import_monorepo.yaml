@@ -26,15 +26,15 @@ jobs:
           python-version: "3.10"
       - name: Install Python dependencies
         run: |
-          pip install -r source/.github/requirements.txt
+          pip install -r l10n/.github/requirements.txt
       - name: Copy translated files for android-components
         run: >
-          python source/.github/scripts/import_strings.py l10n
+          python l10n/.github/scripts/import_strings.py l10n
           --toml l10n/mozilla-mobile/android-components/l10n.toml
           --dest source/android-components
       - name: Copy translated files for focus-android
         run: >
-          python source/.github/scripts/import_strings.py l10n
+          python l10n/.github/scripts/import_strings.py l10n
           --toml l10n/mozilla-mobile/focus-android/l10n.toml
           --dest source/focus-android
       - name: Commit changes and open pull request
@@ -44,7 +44,7 @@ jobs:
           if [[ $(git diff --exit-code) || $(git ls-files --other --exclude-standard) ]]
           then
             branch="monorepo_l10n_updates"
-            git config user.name "l10n-bot"
+            git config user.name "mozilla-l10n-automation-bot"
             git config user.email "actions@users.noreply.github.com"
 
             git checkout -B "$branch"
