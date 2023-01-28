@@ -27,6 +27,7 @@ import mozilla.components.concept.engine.UnsupportedSettingException
 import mozilla.components.concept.engine.content.blocking.TrackerLog
 import mozilla.components.concept.engine.mediaquery.PreferredColorScheme
 import mozilla.components.concept.engine.serviceworker.ServiceWorkerDelegate
+import mozilla.components.concept.engine.utils.EngineReleaseChannel
 import mozilla.components.concept.engine.webextension.Action
 import mozilla.components.concept.engine.webextension.WebExtension
 import mozilla.components.concept.engine.webextension.WebExtensionDelegate
@@ -310,6 +311,7 @@ class GeckoEngineTest {
 
         assertEquals(contentBlockingSettings.cookieBannerMode, EngineSession.CookieBannerHandlingMode.DISABLED.mode)
         assertEquals(contentBlockingSettings.cookieBannerModePrivateBrowsing, EngineSession.CookieBannerHandlingMode.DISABLED.mode)
+        assertEquals(contentBlockingSettings.cookieBannerDetectOnlyMode, engine.settings.cookieBannerHandlingDetectOnlyMode)
 
         try {
             engine.settings.domStorageEnabled
@@ -536,6 +538,26 @@ class GeckoEngineTest {
         engine.settings.cookieBannerHandlingModePrivateBrowsing = policy
 
         verify(mockRuntime.settings.contentBlocking, never()).setCookieBannerModePrivateBrowsing(policy.mode)
+    }
+
+    @Test
+    fun `setCookieBannerHandlingDetectOnlyMode is only invoked when the value is changed`() {
+        val mockRuntime = mock<GeckoRuntime>()
+        val settings = spy(ContentBlocking.Settings.Builder().build())
+        whenever(mockRuntime.settings).thenReturn(mock())
+        whenever(mockRuntime.settings.contentBlocking).thenReturn(settings)
+
+        val engine = GeckoEngine(testContext, runtime = mockRuntime)
+
+        engine.settings.cookieBannerHandlingDetectOnlyMode = true
+
+        verify(mockRuntime.settings.contentBlocking).setCookieBannerDetectOnlyMode(true)
+
+        reset(settings)
+
+        engine.settings.cookieBannerHandlingDetectOnlyMode = true
+
+        verify(mockRuntime.settings.contentBlocking, never()).setCookieBannerDetectOnlyMode(true)
     }
 
     @Test
@@ -1885,6 +1907,7 @@ class GeckoEngineTest {
 
         assertTrue(version.major >= 69)
         assertTrue(version.isAtLeast(69, 0, 0))
+        assertTrue(version.releaseChannel != EngineReleaseChannel.UNKNOWN)
     }
 
     @Test

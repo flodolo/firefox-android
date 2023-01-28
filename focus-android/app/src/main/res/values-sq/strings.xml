@@ -729,7 +729,10 @@
     <string name="cookie_banner_exception_panel_description_state_on_for_site">%1$s do të spastrojë cookie-t për këtë sajt dhe do të rifreskojë faqen. Spastrimi i krejt cookie-ve mund të sjellë nxjerrjen tuaj nga llogaria, ose zbrazje shportash blerjesh.</string>
 
     <!-- Long text for a detail explanation indicating what will happen if cookie banner handling is off for a site, this is shown as part of the cookie banner panel in the toolbar. The placeholder will be updated with the app name. -->
-    <string name="cookie_banner_exception_panel_description_state_off_for_site">%1$s-i mund të provojë të hedhë tej automatikisht kërkesa për “cookie”. Nëse s’ka mundësi hedhjeje tej, %1$s-i mund të pranojë krejt cookie-t, për të hequr qafe banderolën.</string>
+    <string name="cookie_banner_exception_panel_description_state_off_for_site" moz:RemovedIn="111" tools:ignore="UnusedResources">%1$s-i mund të provojë të hedhë tej automatikisht kërkesa për “cookie”. Nëse s’ka mundësi hedhjeje tej, %1$s-i mund të pranojë krejt cookie-t, për të hequr qafe banderolën.</string>
+
+    <!-- Long text for a detail explanation indicating what will happen if cookie banner handling is off for a site, this is shown as part of the cookie banner panel in the toolbar. The placeholder will be updated with the app name. -->
+    <string name="cookie_banner_exception_panel_description_state_off_for_site2">%1$s mund të provojë vetvetiu të hedhë poshtë kërkesa depozitimi cookie-sh.</string>
 
     <!-- Contextual Feature Recommendation Popups -->
     <!-- CFR for Cookie Banner (Banner Info Message). The placeholder will be updated with the app name. -->
@@ -869,7 +872,8 @@
 
     <!-- Tip displayed on home view explaining how to disable tracking protection
     The new line here must be kept as the second half of the string is clickable for the user. -->
-    <string name="tip_disable_tracking_protection">Sajt që sillet çuditshëm?\n Provoni çaktivizimin e Mbrojtjes Nga Gjurmimi</string>
+    <string name="tip_disable_tracking_protection">Sajt që sillet çuditshëm?\n
+    Provoni çaktivizimin e Mbrojtjes Nga Gjurmimi</string>
 
     <!-- Tip displayed on home view explaining how to add sites to homescreen
     Argument 1 will be replaced with a line break in the application.-->
@@ -878,15 +882,21 @@
     <!-- Tip displayed on home view explaining how to make Focus the default browser
     Argument 1 is the app name (Firefox Focus/Firefox Klar/etc).
     The new line here must be kept as the second half of the string is clickable for the user. -->
-    <string name="tip_set_default_browser">Hape çdo lidhje në %1$s\n Caktojeni %1$s si shfletuesin parazgjedhje</string>
+    <string name="tip_set_default_browser">Hape çdo lidhje në %1$s\n
+        Caktojeni %1$s si shfletuesin parazgjedhje
+    </string>
 
     <!-- Tip displayed on home view explaining how to add a custom autocomplete URL
     The new line here must be kept as the second half of the string is clickable for the user. -->
-    <string name="tip_autocomplete_url">Vetëplotësim URL-sh për sajtet që përdorni më shpesh\n Shtypni paksa çfarëdo URL-je te shtylla e adresave</string>
+    <string name="tip_autocomplete_url">Vetëplotësim URL-sh për sajtet që përdorni më shpesh\n
+        Shtypni paksa çfarëdo URL-je te shtylla e adresave
+    </string>
 
     <!-- Tip displayed on home view explaining how to add a custom autocomplete URL
     The new line here must be kept as the second half of the string is clickable for the user. -->
-    <string name="tip_open_in_new_tab">Hapni një lidhje në një skedë të re\n Shtypeni paksa çfarëdo lidhje në një faqe</string>
+    <string name="tip_open_in_new_tab">Hapni një lidhje në një skedë të re\n
+        Shtypni paksa çfarëdo lidhje në një faqe
+    </string>
 
     <!-- Tip displayed on home view explaining how to add a custom autocomplete URL -->
     <string name="tip_disable_tips2">Mbylli ndihmëzat te skena e nisjes</string>
