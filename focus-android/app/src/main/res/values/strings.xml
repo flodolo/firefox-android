@@ -674,7 +674,7 @@
     <!--  Preference summary inside Cookie banner reduction screen. Here you can set the cookie banner option to disabled or reject_all. -->
     <string name="cookie_banner_reject_all_option_summary">See fewer banners by automatically rejecting cookie requests, when possible.</string>
 
-    <!-- Preference for removing cookie/consent banners from sites automatically, this is shown as part of the protections panel with the tracking protection toggle. -->-->
+    <!-- Preference for removing cookie/consent banners from sites automatically, this is shown as part of the protections panel with the tracking protection toggle. -->
     <string name="cookie_banner_exception_item_title">Cookie Banner Reduction</string>
 
     <!-- Text for indicating cookie banner handling is on this site, this is shown as part of the protections panel with the tracking protection toggle. -->
@@ -973,7 +973,7 @@
 
     <!-- Text for context menu additional note.
     %1$s is a placeholder for the app name. -->
-    <string name="contextmenu_erased_images_note2">Saved and shared images &lt;b>will not be&lt;/b> deleted when you erase %1$s history</string>
+    <string name="contextmenu_erased_images_note2">Saved and shared images &lt;b&gt;will not be&lt;/b&gt; deleted when you erase %1$s history</string>
 
     <!-- Theme Preferences -->
     <!-- Preference category for changing default theme to dark or light mode -->
@@ -1000,7 +1000,7 @@
     <string name="mozac_browser_errorpages_security_bad_cert_title">Connection not secure</string>
 
     <!-- The error message shown when a website has an invalid or expired SSL certificate. -->
-    <string name="mozac_browser_errorpages_security_bad_cert_message" ><![CDATA[
+    <string name="mozac_browser_errorpages_security_bad_cert_message"><![CDATA[
     This could be a problem with the server’s configuration, or it could be someone trying to impersonate the server. <br/><br/>
     If you’ve connected to this server successfully in the past, the error may be temporary.
     ]]></string>
